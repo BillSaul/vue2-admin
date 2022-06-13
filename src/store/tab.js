@@ -21,7 +21,6 @@ export default {
     },
     // 更新面包屑数据
     SELECT_MENU(state, val) {
-      console.log(val);
       // 判断是否为首页
       if (val.name !== "home") {
         const index = state.tabList.findIndex((item) => item.name === val.name);
@@ -47,7 +46,6 @@ export default {
       state.menu = menu;
       // 组装动态路由数据
       const menuArray = [];
-      console.log("menu", menu);
       menu.forEach((item) => {
         if (item.children) {
           item.children = item.children.map((item) => {
@@ -60,10 +58,9 @@ export default {
           menuArray.push(item);
         }
       });
-      console.log("menuArray", menuArray);
-      menuArray.forEach(item => {
-        router.addRoute("Main", item)
-      })
+      menuArray.forEach((item) => {
+        router.addRoute("Main", item);
+      });
     },
   },
 };

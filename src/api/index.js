@@ -11,7 +11,6 @@ export const getUser = (params) => {
 };
 
 export const addUser = (data) => {
-  console.log(data);
   return http.post("/user/add", data);
 };
 
@@ -25,4 +24,4 @@ export const delUser = (data) => {
 
 export const getMenu = (data) => {
   return http.post("/permission/getMenu", data);
-}
+};

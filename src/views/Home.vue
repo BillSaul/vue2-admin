@@ -102,7 +102,6 @@ export default {
   },
   mounted() {
     getData().then(({ data }) => {
-      console.log(data);
       const { tableData } = data.data;
       this.tableData = tableData;
 

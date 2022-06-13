@@ -35,8 +35,6 @@ export default {
     handleClose(item, index) {
       this.closeTab(item);
       const length = this.tags.length;
-      console.log(length, index);
-      console.log(this.tags);
       // 路由跳转
       if (item.name !== this.$route.name) {
         return;
